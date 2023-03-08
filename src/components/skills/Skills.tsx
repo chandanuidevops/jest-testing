@@ -3,6 +3,11 @@ import { useState, useEffect } from 'react'
 export const Skills=(props:SkillsProps)=>{
     const {skills} = props
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+    useEffect(() => {
+      setTimeout(() => {
+        setIsLoggedIn(true)
+      }, 1001)
+    }, [])
     return(
         <>
         <ul>
