@@ -1,16 +1,16 @@
-import { SkillsProps } from "./Skills.types";
+import { SkillsProps } from './Skills.types'
 import { useState, useEffect } from 'react'
-export const Skills=(props:SkillsProps)=>{
-    const {skills} = props
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    useEffect(() => {
-      setTimeout(() => {
-        setIsLoggedIn(true)
-      }, 1001)
-    }, [])
-    return(
-        <>
-        <ul>
+export const Skills = (props: SkillsProps) => {
+  const { skills } = props
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true)
+    }, 1001)
+  }, [])
+  return (
+    <>
+      <ul>
         {skills.map((skill) => {
           return <li key={skill}>{skill}</li>
         })}
@@ -20,6 +20,6 @@ export const Skills=(props:SkillsProps)=>{
       ) : (
         <button onClick={() => setIsLoggedIn(true)}>Login</button>
       )}
-        </>
-    )
+    </>
+  )
 }
