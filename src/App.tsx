@@ -6,6 +6,7 @@ import { Counter } from './components/counter/Counter'
 import { AppProviders } from './providers/AppProviders'
 import { MuiMode } from './components/mui/MuiMode'
 import { CounterTwo } from './components/counter-two/CounterTwo'
+import Headline from './components/headline'
 function App() {
   return (
     <AppProviders>
@@ -27,6 +28,7 @@ function App() {
           handleIncrement={() => {}}
           handleDecrement={() => {}}
         />
+        <Headline header="this is header" desc="this is description" />
       </div>
     </AppProviders>
   )
